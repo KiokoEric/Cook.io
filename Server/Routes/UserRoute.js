@@ -51,7 +51,7 @@ UserRouter.post("/Login", async (req, res) => {
     // Create and assign a token
 
     if (NewUser) {
-        const Token = jwt.sign({_id: NewUser._id}, myPassword);
+        const Token = jwt.sign({_id: NewUser._id}, Surrender);
         res.json({Token, UserID: NewUser._id});
     }  
 })

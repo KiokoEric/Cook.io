@@ -8,13 +8,13 @@ const cookieParser = require("cookie-parser");
 RecipeRoute.use(cookieParser())
 dotenv.config();
 
-const myPassword = process.env.Password
+// const myPassword = process.env.Password
 
 const verifyToken = async (req, res, next) => {
 
     const authHeader = req.headers.authorization;
     if (authHeader) {
-        jwt.verify(authHeader, myPassword , (err) => {
+        jwt.verify(authHeader, Surrender , (err) => {
         if (err) {
             return res.sendStatus(403);
         }
