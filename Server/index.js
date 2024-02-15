@@ -21,8 +21,6 @@ app.use(cookieParser())
 
 const dbUrl = "mongodb+srv://KiokoEric:Victory2023@cluster0.lnhdon1.mongodb.net/The_Cook?retryWrites=true&w=majority"
 
-// mongoose.set("strictQuery", true);
-
 mongoose.connect(dbUrl,  {useNewUrlParser: true,useUnifiedTopology: true})
 .then(() => console.log("Connected to the database!"))
 
