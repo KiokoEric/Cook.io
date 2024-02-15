@@ -19,7 +19,7 @@ app.use(cookieParser())
 
     // MongoDB Connection    
 
-const dbUrl = process.env.MONGODB_URL
+const dbUrl = "mongodb+srv://KiokoEric:Victory2023@cluster0.lnhdon1.mongodb.net/The_Cook?retryWrites=true&w=majority"
 
 // mongoose.set("strictQuery", true);
 
