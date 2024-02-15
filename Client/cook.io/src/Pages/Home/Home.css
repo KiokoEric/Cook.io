@@ -1,0 +1,271 @@
+.Home section {
+    margin-bottom: 0.5rem;
+}
+.SearchPage {
+    background-image: url(../../Images/Recipe_Homepage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.2rem;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+.Home h1 {
+    font-size: 55px;
+}
+.Home form {
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5rem;
+    height: 48px;
+    padding: 0.2rem 0.2rem;
+}
+.Home i {
+    border: none;
+    color: black;
+}
+.Home input {
+    background-color: white;
+    border: none;
+    height: 40px;
+    outline: 0;
+    width: 500px;
+}
+.Home input[type = "text"] {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    padding-left: 0.5rem;
+}
+#Utensils {
+    padding-left: 0.5rem;
+}
+#Search {
+    background-color: var(--light-primary);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    margin-top: 0.08rem;
+    padding: 0.8rem 1.5rem;
+}
+.Home section:first-child span {
+    color: red;
+    font-size: 18px;
+}
+.SearchResults {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    column-gap: 2rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    width: 1300px;
+}
+.SearchResults img {
+    border-radius: 5px;
+    height: 400px;
+    width: 400px;
+}
+.SearchResults figure {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+.SearchResults h2 {
+    font-weight: bold; 
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: capitalize;
+} 
+.SearchResults div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.SearchResults div section:first-child {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20rem;
+    justify-content: center;
+}
+.Link {
+    color: black;
+    text-decoration: none;
+}
+.SearchResults button {
+    background-color: var(--light-primary-hover);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-family: 'Instrument Serif', serif;
+    font-size: 19px;
+    margin-left: -10.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.5rem; 
+}
+.SearchResults button:hover {
+    background-color: black;
+}
+.SearchResults button i {
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+.SearchResults button:hover::after {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: black;
+    content: "Add to Favourites";
+    font-family: 'Instrument Serif', serif;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    width: 120px;
+    z-index: 1;
+}
+
+@media (max-width:768px) {
+    .Home {
+        width: 768px;
+    }
+    .SearchPage {
+        background-image: url(../../Images/Recipe_Homepage.jpg);
+        height: 300px;
+        width: 768px;
+    }
+    .Home h1 {
+        font-size: 35px;
+    }
+    .Home input {
+        width: 500px;
+    }
+    .Failure {
+        color: red;
+        font-size: 35px;
+        text-align: center;
+        width: 750px;
+    }
+    .Home section:first-child p {
+        text-align: center;
+        width: 400px;
+    }
+    .SearchResults {
+        display: grid;
+        grid-template-columns: 220px 220px 220px;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem; 
+        row-gap: 2rem;
+        margin-top: 2rem;
+        width: 750px;
+    }
+    .SearchResults  img {
+        border-radius: 5px;
+        height: 220px;
+        width: 220px;
+    }
+}
+
+@media (max-width:428px) {
+    .Home {
+        width: 428px;
+    }
+    .SearchPage {
+        background-image: url(../../Images/Responsive_Recipe_Homepage.jpg);
+        height: 300px;
+        width: 428px;
+    }
+    .Home h1 {
+        font-size: 35px;
+    }
+    .Home input {
+        width: 250px; 
+    }
+    .Failure {
+        color: red;
+        font-size: 25px;
+        text-align: center;
+        width: 250px;
+    }
+    .Home section:first-child p {
+        text-align: center;
+        width: 400px;
+    }
+    .SearchResults {
+        display: grid;
+        grid-template-columns: 350px;
+        justify-content: center;
+        row-gap: 2rem;
+        margin-left: 1rem;
+        width: 400px;
+    }
+    .SearchResults img {
+        border-radius: 5px;
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width:375px) {
+    .Home {
+        width: 375px;
+    }
+    .SearchPage {
+        background-image: url(../../Images/Responsive_Recipe_Homepage.jpg);
+        height: 300px;
+        margin: auto;
+        width: 375px;
+    }
+    .Home h1 {
+        font-size: 35px;
+    }
+    .Home input {
+        width: 240px;
+    }
+    .Failure {
+        color: red;
+        font-size: 25px;
+        text-align: center;
+        width: 250px;
+    }
+    .Home section:first-child p {
+        text-align: center;
+        width: 350px;
+    }
+    .SearchResults {
+        display: grid;
+        grid-template-columns: 350px;
+        row-gap: 2rem;
+        justify-content: center;
+        width: 375px;
+    }
+    .SearchResults img {
+        border-radius: 5px;
+        height: 300px;
+        width: 300px;
+    }
+    .SearchResults button {
+        margin-left: -9rem;
+    }
+}

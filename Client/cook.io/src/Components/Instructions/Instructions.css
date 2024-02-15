@@ -1,0 +1,271 @@
+.Instruction {
+    color: black;
+    margin: auto;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+    width:1200px;
+}
+.Instruction figure {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+}
+.Instruction figure img {
+    border-radius: 4px;
+    cursor: pointer;
+    height: 400px;
+    width: 600px;
+}
+.Instruction h2 {
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+    padding-top: 0.5rem;
+}
+.Instruction h3 {
+    margin-bottom: 1.5rem;
+}
+.Instruction figcaption div {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8rem;
+    margin-left: 1.5rem;
+}
+.Instruction ul {
+    margin-bottom: 2rem;
+}
+.Instruction li {
+    margin-bottom: 0.4rem;
+}
+.Instruction pre {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+#Play {
+    background-color: var(--Bright-Orange);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 1rem 1rem;
+    position: absolute;
+    top: 15.5rem;
+    left: 21.5rem;
+    width: 60px;
+    z-index: 2;
+}
+#Play::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    animation: Bloom1 1.5s linear 0.5s infinite;
+    opacity: 0;
+    z-index: 1;
+}
+#Play::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 10px solid white;
+    border-radius: 50%;
+    animation: Bloom2 1.5s linear 0.5s infinite;
+    opacity: 0;
+    z-index: 1;
+}
+
+@keyframes Bloom1 {
+
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+@keyframes Bloom2 {
+
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@media (max-width: 768px) {
+    .Instruction {
+        margin-top: 2rem;
+        margin-left: 0.8rem;
+        width: 750px;
+    }
+    .Instruction figure {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        row-gap: 2rem;
+    }
+    .Instruction figure img {
+        border-radius: 4px;
+        cursor: pointer;
+        height: 320px;
+        margin-top: 2rem;
+        width: 320px;
+    }
+    #Play {
+        position: absolute;
+        top: 15rem;
+        left: 7.5rem;
+    }
+    .Instruction figcaption  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+    }
+    .Instruction figcaption div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 1.5rem;
+        width: 400px;
+    }
+    .Instruction figcaption h2, h3 {
+        text-align: center;
+    }
+    .Instruction li {
+        font-size: 18px;
+    }
+    .Instruction pre {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Instrument Serif', serif;
+        font-size: 18px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        width: 400px;
+    }
+}
+
+@media (max-width: 428px) {
+    .Instruction {
+        margin-top: 2rem;
+        margin-left: 0.8rem;
+        width: 400px;
+    }
+    .Instruction figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+    .Instruction figure img {
+        border-radius: 4px;
+        cursor: pointer;
+        height: 300px;
+        width: 300px;
+    }
+    #Play {
+        position: absolute;
+        top: 14.8rem;
+        left: 10rem;
+    }
+    .Instruction figcaption  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+    }
+    .Instruction figcaption div {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.5rem;
+        width: 380px;
+    }
+    .Instruction figcaption h2, h3 {
+        text-align: center;
+    }
+    .Instruction li {
+        font-size: 18px;
+    }
+    .Instruction pre {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Instrument Serif', serif;
+        font-size: 18px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        width: 380px;
+    }
+}
+
+@media (max-width: 375px) {
+    .Instruction {
+        margin-top: 2rem;
+        margin-left: 0.8rem;
+        width: 370px;
+    }
+    .Instruction figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2rem;
+    }
+    .Instruction figure img {
+        border-radius: 4px;
+        cursor: pointer;
+        height: 300px;
+        width: 300px;
+    }
+    #Play {
+        position: absolute;
+        top: 13.5rem;
+        left: 9rem;
+    }
+    .Instruction figcaption div {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.5rem;
+        width: 320px;
+    }
+    .Instruction figcaption h2, h3 {
+        text-align: center;
+    }
+    .Instruction li {
+        font-size: 18px;
+    }
+    .Instruction pre {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Instrument Serif', serif;
+        font-size: 18px;
+        margin-left: 1rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        width: 350px;
+    }
+}

@@ -1,0 +1,308 @@
+.Header {
+    background-color: white;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+.Header article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0.5rem 0.5rem 0.3rem 1.5rem;
+    width: 100%;
+}
+.Header section:nth-child(2) nav {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+}
+.Link {
+    text-decoration: none;
+}
+.Header p:hover {
+    color: var(--light-primary);
+}
+.Header section:last-child {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.35rem;
+}
+.Header section:last-child h4 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.05rem;
+    font-size: 16px;
+    text-align: center;
+}
+.Header section:last-child h4 {
+    margin-top: 0.15rem;
+}
+.Bookmark button {
+    background-color: var(--light-primary);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Instrument Serif', serif;
+    font-size: 16px;
+    height: 34px;
+    padding: 0.5rem 0.8rem;
+}
+.Header section:last-child button i {
+    font-size: 15px;
+    margin-right: 0.5rem;
+}
+#Bars {
+    display: none;
+}
+#Display {
+    display: none;
+}
+.Hidden {
+    display: none;
+}
+.User button {
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Instrument Serif', serif;
+    font-size: 16px;
+    height: 34px;
+    padding: 0.5rem 0.8rem;
+}
+.Logout {
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Instrument Serif', serif;
+    font-size: 16px;
+    height: 34px;
+    padding: 0.5rem 0.8rem;
+}
+#Profile {
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 0.65rem 0.65rem;
+}
+#Profile:hover {
+    background-color: orangered;
+    color: black;
+}
+
+@media (max-width:768px) {
+    .Header article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        padding: 0.5rem 0.2rem 0.3rem 0.2rem;
+        width: 768px;
+    }
+    .Header section:first-child img {
+        margin-left: 0.85rem;
+    }
+    .Header article section:nth-child(2) nav {
+        background-color: white;
+        border-radius: 0px 0px 0px 10px;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.2rem;
+        height: 500px;
+        margin-top: -0.2rem;
+        margin-left: 23.5rem;
+        padding-top: 0.8rem;
+        width: 200px;
+    }
+    .OpenNavigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 3.45rem;
+        left: 6rem;
+        transition: all 0.5s linear;
+        transform: translateX(60%);
+        width: 350px;
+    }
+    .CloseNavigation{
+        position: absolute;
+        top: 3.5rem;
+        transform: translateX(180%);
+        transition: all 0.5s linear;
+    }
+    .Hidden {
+        display: block;
+    }
+    #Bars {
+        display: block;
+        margin-top: 0.45rem;
+        margin-left: -1.5rem;
+    }
+    .Navigate {
+        border-bottom: 1px solid black;
+        padding-left: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 150px;
+    }
+    .Header article section:last-child button {
+        display: none;
+    }
+    #Profile {
+        margin-left: -0.5rem;
+        margin-right: 1rem;
+    }
+    #Favourites {
+        display: block;
+    }
+}
+
+@media (max-width:428px) {
+    .Header article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        padding: 0.5rem 0.2rem 0.3rem 0.2rem;
+        width: 420px;
+    }
+    .Header section:first-child img {
+        margin-left: 0.85rem;
+    }
+    .Header article section:nth-child(2) nav {
+        background-color: white;
+        border-radius: 0px 0px 0px 10px;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.2rem;
+        height: 500px;
+        margin-top: -0.2rem;
+        margin-left: 1.2rem;
+        padding-top: 0.8rem;
+        width: 200px;
+    }
+    .OpenNavigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 3.45rem;
+        left: 7rem;
+        transition: all 0.5s linear;
+        transform: translateX(60%);
+        width: 350px;
+    }
+    .CloseNavigation{
+        position: absolute;
+        top: 3.5rem;
+        transform: translateX(180%);
+        transition: all 0.5s linear;
+    }
+    .Hidden {
+        display: block;
+    }
+    #Bars {
+        display: block;
+        margin-top: 0.5rem;
+        margin-left: -1.5rem;
+    }
+    .Navigate {
+        border-bottom: 1px solid black;
+        padding-left: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 150px;
+    }
+    .Header article section:last-child button {
+        display: none;
+    }
+    #Favourites {
+        display: block;
+    }
+    #Profile {
+        margin-left: -0.25rem;
+        margin-right: 0.25rem;
+    }
+}
+
+@media (max-width:375px) {
+    .Header article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        padding: 0.5rem 0.2rem 0.3rem 0.2rem;
+        width: 375px;
+    }
+    .Header section:first-child img {
+        margin-left: 0.85rem;
+    }
+    .Header article section:nth-child(2) nav {
+        background-color: white;
+        border-radius: 0px 0px 0px 10px;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.2rem;
+        height: 500px;
+        margin-top: -0.2rem;
+        margin-left: -2rem;
+        padding-top: 0.8rem;
+        width: 200px;
+    }
+    .OpenNavigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 3.45rem;
+        left: 7rem;
+        transition: all 0.5s linear;
+        transform: translateX(60%);
+        width: 350px;
+    }
+    .CloseNavigation{
+        position: absolute;
+        top: 3.5rem;
+        transform: translateX(180%);
+        transition: all 0.5s linear;
+    }
+    .Hidden {
+        display: block;
+    }
+    #Bars {
+        display: block;
+        margin-top: 0.5rem;
+        margin-left: 0rem;
+    }
+    .Navigate {
+        border-bottom: 1px solid black;
+        padding-left: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 150px;
+    }
+    .Header article section:last-child button {
+        display: none;
+    }
+    #Favourites {
+        display: block;
+    }
+    #Profile {
+        margin-left: -0.25rem;
+        margin-right: 0.25rem;
+    }
+}

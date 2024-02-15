@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+html::-webkit-scrollbar-thumb {
+  background-color:var(--light-primary) ;
+}
+html::-webkit-scrollbar-track {
+  background-color: black;
+}
+:root {
+
+  --Bright-Orange: #f60;
+  --light-primary: hsl(11, 87%, 59%);
+  --light-primary-hover: hsl(11, 60%, 50%);
+
+}
+body {
+  font-family: 'Instrument Serif', serif;
+  font-size: 18px;
+}
+.Failure {
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  width: 1300px;
+}
+.Error {
+  color: red;
+  font-size: 40px;
+  text-align: center;
+}
+.ErrorField {
+  color: red;
+  font-size: 18px;
+  margin-top: 0.45rem;
+  text-align: center;
+}
+.Success {
+  color: green;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .App {
+    min-height: 35rem;
+    overflow-x: hidden;
+    width: 768px;
+  }
+  .Failure {
+    color: red;
+    font-size: 40px;
+    text-align: center;
+    width: 768px;
+  }
+}
+
+@media (max-width: 428px) {
+  .App {
+    overflow-x: hidden;
+    width: 428px;
+  }
+  .Failure {
+    color: red;
+    font-size: 40px;
+    text-align: center;
+    width: 428px;
+  }
+}
+
+@media (max-width: 375px) {
+  .App {
+    overflow-x: hidden;
+    width: 375px;
+  }
+  .Failure {
+    color: red;
+    font-size: 40px;
+    text-align: center;
+    width: 375px;
+  }
+}

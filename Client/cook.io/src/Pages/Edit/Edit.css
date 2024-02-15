@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+
+.Edit section:first-child {
+    background-image: url("../../Images/Create_HomePage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+.Edit section:first-child h1 {
+    color: white; 
+    font-size: 50px;
+}
+.Edit section:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    margin-bottom: 4.5rem;
+}
+.Edit form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.65rem;
+    margin-top: 0.5rem;
+}
+.Edit form div {
+    display: flex;
+    flex-direction: column;
+}
+.Edit form p label {
+    text-align: left;
+}
+.Edit form input {
+    border-radius: 3px;
+    height: 40px;
+    margin-top: 0.5rem;
+    outline: 0;
+    width: 600px;
+}
+.Edit form input[type="text"] {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    padding-left: 0.65rem;
+}
+.Edit form input[type="email"] {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    padding-left: 0.65rem;
+}
+.Edit form input[type="number"] {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    padding-left: 0.65rem;
+}
+.Description {
+    height: 100px;
+}
+.Edit form textarea {
+    border: 2px solid black;
+    border-radius: 3px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    width: 600px;
+}
+.Edit form textarea[type="text"]{
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+/* .Errors {
+    color: red;
+    font-size: 16px;
+    margin-top: 0.45rem;
+}
+.Success {
+    color: green;
+    font-size: 25px;
+    margin-top: 0.25rem;
+} */
+.Edit form div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Edit form button {
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    width: 400px;
+}
+
+@media (max-width:768px) {
+    .Edit section:first-child  {
+        background-image: url("../../Images/Create_HomePage.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 3px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        width: 750px;
+    }
+}
+
+@media (max-width:428px) {
+    .Edit section:first-child  {
+        background-image: url("../../Images/Create_HomePage.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 3px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        width: 420px;
+    }
+    .Edit section:first-child h1 {
+        font-size: 40px;
+    }
+    .Edit form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Edit form input {
+        width: 350px;
+    }
+    .Edit form textarea {
+        width: 350px;
+    }
+    .Edit form button {
+        background-color: black;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        font-family: 'Instrument Serif', serif;
+        font-size: 18px;
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+        text-align: center;
+        width: 350px;
+    }
+}
+
+@media (max-width:375px) {
+    .Edit section:first-child  {
+        background-image: url("../../Images/Create_HomePage.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 3px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        width: 370px;
+    }
+    .Edit section:first-child h1 {
+        font-size: 40px;
+    }
+    .Edit form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Edit form input {
+        width: 320px;
+    }
+    .Edit form textarea {
+        width: 320px;
+    }
+    .Edit form button {
+        background-color: black;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        font-family: 'Instrument Serif', serif;
+        font-size: 18px;
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+        text-align: center;
+        width: 320px;
+    }
+}

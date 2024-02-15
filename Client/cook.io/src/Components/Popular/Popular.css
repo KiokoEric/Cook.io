@@ -1,0 +1,195 @@
+.Popular {
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+}
+.Popular h3 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.Popular h2 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+.Popular span {
+    font-size: 25px;
+}
+.Popular figure {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: center;
+    margin: auto;
+    width: 1300px;
+}
+.Popular figcaption {
+    display: flex;
+    flex-direction: column;
+}
+.Popular img {
+    border-radius: 8px;
+    cursor: pointer;
+    height: 400px;
+    width: 600px;
+}
+.Popular figcaption div {
+    display: flex;
+    flex-direction: row;
+    column-gap: 6.5rem;
+}
+.Popular h4 {
+    font-size: 25px;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+.Popular summary {
+    margin-top: 1rem;
+}
+.Popular summary h4 {
+    margin-bottom: 1rem;
+}
+.Popular details {
+    width: 700px;
+}
+.Popular pre {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    line-height: 1.5rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.Popular p {
+    color: black;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+.Popular button {
+    background-color: var(--light-primary-hover);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Instrument Serif', serif;
+    font-size: 19px;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    width: 250px;
+}
+.Popular button:hover {
+    background-color: black;
+}
+
+@media (max-width:768px) {
+    .Popular {
+        margin: auto;
+        width: 750px;
+    }
+    .Popular figure {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 760px;
+    }
+    .Popular figure img{
+        margin-left: 2rem;
+        width: 350px;
+    }
+    .Popular figcaption {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+    }
+    .Popular h2 {
+        text-align: center;
+    }
+    .Popular figcaption div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 2.5rem;
+        width: 300px;
+    }
+}
+
+@media (max-width:428px) {
+    .Popular {
+        margin: auto;
+        width: 400px;
+    }
+    .Popular figure {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 400px;
+    }
+    .Popular figure img{
+        height: 300px;
+        margin-left: 2.8rem;
+        width: 350px;
+    }
+    .Popular figcaption {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+    }
+    .Popular h2 {
+        text-align: center;
+    }
+    .Popular figcaption div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 2.5rem;
+        width: 350px;
+    }
+}
+
+@media (max-width:375px) {
+    .Popular {
+        margin: auto;
+        width: 370px;
+    }
+    .Popular figure {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 370px;
+    }
+    .Popular figure img{
+        height: 300px;
+        margin-left: 2.2rem;
+        width: 300px;
+    }
+    .Popular figcaption {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 370px;
+    }
+    .Popular h2 {
+        text-align: center;
+    }
+    .Popular figcaption div {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2.5rem;
+        width: 320px;
+    }
+}

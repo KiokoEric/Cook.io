@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+
+.MyProfile section:first-child {
+    background-image: url("../../../Images/MyProfile.jpg");
+    background-position: center 15%;
+    background-repeat: no-repeat;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding-bottom: 5rem;
+    width: 100%;
+} 
+.MyProfile section:first-child h1 {
+    color: black;
+    font-size: 50px;
+} 
+.MyProfile section:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    margin-bottom: 4.5rem;
+}
+.MyProfile form {
+    margin-top: 0.5rem;
+}
+.MyProfile form h1 {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 0.5rem;
+    padding: 0.55rem 2rem;
+    text-align: center;
+    width: 400px;
+}
+.MyProfile form div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.65rem;
+    margin-bottom: 0.5rem;
+}
+.MyProfile form div label {
+    text-align: left;
+}
+.MyProfile div article {
+    border: 2px solid black;
+    border-radius: 3px;
+    display: flex;
+    flex-direction:row;
+}
+#myPassword {
+    border: none;
+    width: 360px;
+}
+#Eye {
+    margin-top: 0.6rem;
+    margin-right: 1rem;
+}
+.MyProfile form input {
+    border-radius: 3px;
+    height: 40px;
+    outline: 0;
+    width: 400px;
+}
+.MyProfile form input[type="text"] {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    padding-left: 0.65rem;
+}
+.MyProfile form input[type="email"] {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    padding-left: 0.65rem;
+}
+.MyProfile form input[type="number"] {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    padding-left: 0.65rem;
+}
+.MyProfile form input[type="Password"] {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    padding-left: 0.65rem;
+}
+.Error {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+}
+.MyProfile form button {
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    width: 400px;
+}
+.MyProfile form button:hover {
+    background-color: orangered;
+    color: black;
+    font-weight: bold;
+}
+
+@media (max-width:768px) {
+    .MyProfile section:first-child {
+        background-image: url("../../../Images/Profile_HomePage.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        margin: auto;
+        margin-bottom: 1rem;
+        padding-bottom: 5rem;
+        width: 100%;
+    }
+}
+
+@media (max-width:428px) {
+    .MyProfile section:first-child {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../../Images/Profile_HomePage.jpg");
+        background-position: center 75%;
+        background-repeat: no-repeat;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        margin: auto;
+        margin-bottom: 1rem;
+        padding-bottom: 5rem;
+        width: 100%;
+    }
+    .MyProfile section:first-child h1 {
+        color:white;
+    } 
+    .MyProfile form input {
+        border-radius: 3px;
+        height: 40px;
+        outline: 0;
+        width: 350px;
+    }
+    #myPassword {
+        border: none;
+        width: 300px;
+    }
+    .MyProfile form button {
+        background-color: black;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        font-family: 'Instrument Serif', serif;
+        font-size: 18px;
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+        text-align: center;
+        width: 350px;
+    }
+}
+
+@media (max-width:375px) {
+    .MyProfile section:first-child {
+        background-image: url("../../../Images/Profile_HomePage.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        margin: auto;
+        margin-bottom: 1rem;
+        padding-bottom: 5rem;
+        width: 100%;
+    }
+    .MyProfile section:first-child h1 {
+        color: white;
+    } 
+    .MyProfile form input {
+        border-radius: 3px;
+        height: 40px;
+        outline: 0;
+        width: 320px;
+    }
+    #myPassword {
+        border: none;
+        width: 280px;
+    }
+    .MyProfile form button {
+        background-color: black;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        font-family: 'Instrument Serif', serif;
+        font-size: 18px;
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+        text-align: center;
+        width: 320px;
+    }
+}

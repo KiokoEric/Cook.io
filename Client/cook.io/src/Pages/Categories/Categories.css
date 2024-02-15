@@ -1,0 +1,267 @@
+.Category section:first-child {
+    background: url(../../Images/Category_HomeImage.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    width: 100%;
+}
+.Category h1 {
+    font-size: 55px;
+}
+.Category form {
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5rem;
+    height: 48px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 0.2rem;
+}
+.Category i {
+    border: none;
+    color: black;
+}
+.Category select {
+    background-color: white;
+    border: none;
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    height: 40px;
+    padding-left: 0.5rem;
+    outline: 0;
+    width: 500px;
+}
+#World {
+    padding-left: 0.5rem;
+}
+#Search {
+    background-color: var(--light-primary);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+}
+.Category span {
+    color: red;
+    font-size: 20px;
+}
+.Category section:last-child {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    column-gap: 2rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 1300px;
+}
+.Category section:last-child div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Category section:last-child figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.5rem;
+}
+.Category section:last-child img {
+    border-radius: 5px;
+    cursor: pointer;
+    height: 400px;
+    width: 400px;
+}
+.Category section:last-child h2 {
+    font-weight: bold; 
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.Category section:last-child button {
+    background-color: var(--light-primary-hover);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-family: 'Instrument Serif', serif;
+    font-size: 19px;
+    margin-left: -22.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.5rem;
+}
+.Category section:last-child button:hover {
+    background-color: black;
+}
+.Category section:last-child button i {
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+.Category section:last-child button:hover::after {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: black;
+    content: "Add to Favourites";
+    font-family: 'Instrument Serif', serif;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    width: 120px;
+    z-index: 1;
+}
+
+@media (max-width:768px) {
+    .Category section:first-child {
+        background: url(../../Images/Category_HomeImage.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        width: 768px;
+    }
+    .Category h1 {
+        font-size: 40px;
+        margin-bottom: 1rem;
+    }
+    .Category form {
+        width: 600px;
+    }
+    .Category select {
+        font-size: 17px;
+        padding-left: 0.1rem;
+        width: 530px;
+    }
+    #Search {
+        width: 60px;
+    }
+    .Category section:last-child {
+        display: grid;
+        grid-template-columns: 220px 220px 220px;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem; 
+        row-gap: 2rem;
+        margin-left: 1.5rem;
+        width: 750px;
+    }
+    .Category section:last-child img {
+        height: 220px;
+        width: 220px;
+    }
+    .Category section:last-child button {
+        width: 200px;
+    }
+}
+
+@media (max-width:428px) {
+    .Category section:first-child {
+        background: url(../../Images/Responsive_Category_HomeImage.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        width: 428px;
+    }
+    .Category h1 {
+        font-size: 35px;
+    }
+    .Category form {
+        width: 350px;
+    }
+    .Category select {
+        font-size: 17px;
+        padding-left: 0.1rem;
+        width: 290px;
+    }
+    .Category select option {
+        width: 250px;
+    }
+    #Search {
+        width: 60px;
+    }
+    .Category section:last-child {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin-left: 1.5rem;
+        width: 400px;
+    }
+    .Category section:last-child img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width:375px) {
+    .Category section:first-child {
+        background: url(../../Images/Responsive_Category_HomeImage.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        width: 375px;
+    }
+    .Category h1 {
+        font-size: 35px;
+    }
+    .Category form {
+        width: 350px;
+    }
+    .Category select {
+        font-size: 17px;
+        padding-left: 0.1rem;
+        width: 242px;
+    }
+    #Search {
+        width: 60px;
+    }
+    .Category section:last-child {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin-left: 1rem;
+        width: 375px;
+    }
+    .Category section:last-child img {
+        height: 300px;
+        width: 300px;
+    }
+}
