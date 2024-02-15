@@ -6,7 +6,7 @@ const User = require("../Models/Users");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
-const myPassword = process.env.Password
+// const myPassword = process.env.Password
 
 UserRouter.use(cookieParser())
 dotenv.config();
@@ -51,7 +51,7 @@ UserRouter.post("/Login", async (req, res) => {
     // Create and assign a token
 
     if (NewUser) {
-        const Token = jwt.sign({_id: NewUser._id}, Surrender);
+        const Token = jwt.sign({_id: NewUser._id}, "Surrender");
         res.json({Token, UserID: NewUser._id});
     }  
 })

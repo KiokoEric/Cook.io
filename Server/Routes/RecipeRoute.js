@@ -14,7 +14,7 @@ const verifyToken = async (req, res, next) => {
 
     const authHeader = req.headers.authorization;
     if (authHeader) {
-        jwt.verify(authHeader, Surrender , (err) => {
+        jwt.verify(authHeader, "Surrender" , (err) => {
         if (err) {
             return res.sendStatus(403);
         }
