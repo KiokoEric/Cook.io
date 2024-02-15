@@ -17,7 +17,7 @@ app.use(cors({
 app.use(express.json())
 app.use(cookieParser())
 
-    // MongoDB Connection    
+// MongoDB Connection    
 
 const dbUrl = "mongodb+srv://KiokoEric:Victory2023@cluster0.lnhdon1.mongodb.net/The_Cook?retryWrites=true&w=majority"
 
@@ -25,7 +25,7 @@ mongoose.connect(dbUrl,  {useNewUrlParser: true,useUnifiedTopology: true})
 .then(() => console.log("Connected to the database!"))
 
 
-// import Routes
+// Import Routes
 
 const UserRoute = require("./Routes/UserRoute");
 const RecipeRoute = require("./Routes/RecipeRoute"); 
