@@ -27,14 +27,16 @@ mongoose.connect(dbUrl)
 .then(() => console.log("Connected to the database!"))
 
 
-    // import Routes
+// import Routes
 
-    const UserRoute = require("./Routes/UserRoute");
-    const RecipeRoute = require("./Routes/RecipeRoute"); 
-    const FavouriteRoute = require("./Routes/FavouriteRoute"); 
+const UserRoute = require("./Routes/UserRoute");
+const RecipeRoute = require("./Routes/RecipeRoute"); 
+const FavouriteRoute = require("./Routes/FavouriteRoute"); 
 
-    app.use("/Users", UserRoute);
-    app.use("/Recipe", RecipeRoute);
-    app.use("/Favourites", FavouriteRoute);
+app.use("/Users", UserRoute);
+app.use("/Recipe", RecipeRoute);
+app.use("/Favourites", FavouriteRoute);
 
-app.listen(4000)   
+app.listen(4000, () => {
+    console.log("Welcome to Cook.io")
+})    
