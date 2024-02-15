@@ -23,7 +23,7 @@ const dbUrl = "mongodb+srv://KiokoEric:Victory2023@cluster0.lnhdon1.mongodb.net/
 
 // mongoose.set("strictQuery", true);
 
-mongoose.connect(dbUrl)
+mongoose.connect(dbUrl,  {useNewUrlParser: true,useUnifiedTopology: true})
 .then(() => console.log("Connected to the database!"))
 
 
