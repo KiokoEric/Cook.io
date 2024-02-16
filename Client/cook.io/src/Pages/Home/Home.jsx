@@ -54,22 +54,9 @@ const Home = () => {
             const data = {
                 ID, userOwner
             }
-            await Axios.post(`http://localhost:4000/Favourites/Favourite/${ID}`, data, {
+            await Axios.post(`https://cook-io-server.vercel.app/Favourites/Favourite/${ID}`, data, {
                 headers: { authorization: Cookie.auth_token },
             })
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
-    // Remove From Favourites
-
-    const RemoveFromFavourites = async (ID) => {
-
-        try {
-            Axios.delete(`http://localhost:4000/Favourites/${ID}`, {
-                headers: { authorization: Cookie.auth_token }
-            }) 
         } catch (error) {
             console.error(error);
         }

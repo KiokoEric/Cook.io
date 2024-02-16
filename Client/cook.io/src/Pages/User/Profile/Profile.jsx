@@ -50,7 +50,7 @@ const Profile = () => {
 
         const FetchUser =() => {
         try{
-            Axios.get(`http://localhost:4000/Users/${userID}`, {
+            Axios.get(`https://cook-io-server.vercel.app/Users/${userID}`, {
             headers: { authorization: Cookie.auth_token },
             }) 
             .then((Data) => { 

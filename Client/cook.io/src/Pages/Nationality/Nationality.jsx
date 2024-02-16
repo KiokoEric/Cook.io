@@ -4,7 +4,6 @@ import "../Nationality/Nationality.css";
 import { useCookies } from "react-cookie";
 import { useGetUserID } from "../../Hooks/UseGetUserID";
 import { Link } from 'react-router-dom';
-import { useAppContext } from '../../Components/Context/AppContext';
 
 const Nationality = () => {
 
@@ -53,7 +52,7 @@ const Nationality = () => {
             ID, userOwner
         }
         try {
-        await Axios.post("http://localhost:4000/Favourites/AddFavourite", data, {
+        await Axios.post("https://cook-io-server.vercel.app/Favourites/AddFavourite", data, {
             headers: { authorization: Cookie.auth_token },
         });
         setFavourites(data.Favourites);

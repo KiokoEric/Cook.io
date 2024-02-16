@@ -14,7 +14,7 @@ const DeleteProfile = () => {
 
     const DeleteUser = (id) => {
         try{
-            Axios.delete(`http://localhost:4000/Users/Delete/${id}`, {
+            Axios.delete(`https://cook-io-server.vercel.app/Users/Delete/${id}`, {
                 headers: { authorization: Cookie.auth_token }
             })
             .then(() => { 
