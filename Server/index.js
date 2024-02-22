@@ -12,7 +12,7 @@ dotenv.config();
 app.use(cors({
     origin: ["https://cook-io-mu.vercel.app"],
     methods: ["POST", "GET", "PUT", "DELETE"],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin', '*'],
     credentials: true
 }))
 app.use((req, res, next) => {
