@@ -10,14 +10,14 @@ dotenv.config();
 // Middleware
 
 app.use(cors({
-    AccessControlAllowOrigin: ["https://cook-io-mu.vercel.app"],
-    methods: ["POST", "GET", "PUT", "DELETE"],
+    Origin: ["https://cook-io-mu.vercel.app"],
+    methods: ["POST", "GET", "PUT", "DELETE", "Access-Control-Allow-Methods"],
     credentials: true
 }))
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Allowed HTTP methods
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization'); // Allowed headers
+    res.header('Access-Control-Allow-Origin: *'); // Allow requests from any origin
+    res.header('Access-Control-Allow-Methods : GET, POST, PUT, DELETE, OPTIONS'); // Allowed HTTP methods
+    res.header('Access-Control-Allow-Headers : Origin, X-Requested-With, Content-Type, Accept, Authorization'); // Allowed headers
     next();
 });
 app.use(express.json())
