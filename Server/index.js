@@ -35,6 +35,6 @@ app.use("/Users", UserRoute);
 app.use("/Recipe", RecipeRoute);
 app.use("/Favourites", FavouriteRoute);
 
-// app.listen(4000, () => {
-//     console.log("Welcome to Cook.io")
-// })    
+app.get("/", (req, res) => {
+    res.json("Welcome to Cook.io")
+})
