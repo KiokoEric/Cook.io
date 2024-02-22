@@ -16,7 +16,7 @@ app.use(cors({
     credentials: true
 }))
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin: *'); // Allow requests from any origin
+    res.header('Access-Control-Allow-Origin: https://cook-io-mu.vercel.app'); // Allow requests from any origin
     res.header('Access-Control-Allow-Methods : GET, POST, PUT, DELETE, OPTIONS'); // Allowed HTTP methods
     res.header('Access-Control-Allow-Headers : Origin, X-Requested-With, Content-Type, Accept, Authorization'); // Allowed headers
     res.header('Access-Control-Allow-Credentials', 'true');
