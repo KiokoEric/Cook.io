@@ -26,7 +26,7 @@ const Login = () => {
         setPassword(e.target.value)
     }
 
-
+    Axios.defaults.withCredentials = true;
     const onLogin = async (e) => {
         e.preventDefault()
         const data = {
@@ -44,6 +44,7 @@ const Login = () => {
         }
     }
 
+    Axios.defaults.withCredentials = true;
     const DemoLogin = async (e) => {
         e.preventDefault()
         const data = {
