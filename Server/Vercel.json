@@ -12,7 +12,7 @@
             "dest": "/",
             "methods": ["POST", "GET", "PUT", "DELETE"],
             "headers" : {
-                "Access-Control-Allow-Origin": "*"
+                "Access-Control-Allow-Origin": "https://cook-io-mu.vercel.app"
             }
         }
     ]
