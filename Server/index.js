@@ -20,6 +20,7 @@ dotenv.config();
 //     res.header('Access-Control-Allow-Headers : Origin, X-Requested-With, Content-Type, Accept, Authorization'); // Allowed headers
 //     next();
 // });
+
 app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
