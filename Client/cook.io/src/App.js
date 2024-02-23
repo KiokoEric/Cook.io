@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/Home' element={ <Home /> } />
+        <Route path='/Home' element={ ID ? <Home /> : <Navigate to="/" /> } />
         <Route path='Explore' element={ ID ? <RecipeIndex /> : <Navigate to="/" /> }/>
         <Route path='Categories' element={ ID ? <Categories /> : <Navigate to="/" /> }/>
         <Route path='/Recipe' element={<Recipe />} />
