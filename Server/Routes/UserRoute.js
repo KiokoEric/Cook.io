@@ -12,6 +12,7 @@ const myPassword = process.env.Password
 UserRouter.use(cookieParser())
 dotenv.config();
 
+UserRouter.options('/Registration', cors()) 
 UserRouter.post("/Registration", cors(),  async (req, res) => {
 
     // Checking if the user is already in the database
@@ -37,6 +38,7 @@ UserRouter.post("/Registration", cors(),  async (req, res) => {
     }
 })
 
+UserRouter.options("/Login", cors()) 
 UserRouter.post("/Login", cors(), async (req, res) => {
 
     // Checking if the email is in the database
@@ -57,6 +59,7 @@ UserRouter.post("/Login", cors(), async (req, res) => {
     }  
 })
 
+UserRouter.options('/:id', cors()) 
 UserRouter.get('/:id', cors(),  async (req, res) => { 
     try {
     const UserDetails = await User.findById(req.params.id);
@@ -69,6 +72,7 @@ UserRouter.get('/:id', cors(),  async (req, res) => {
     }
 });
 
+UserRouter.options('/:userId/Name', cors()) 
 UserRouter.get('/:userId/Name', cors(), async (req, res) => { 
 
     try {
@@ -84,6 +88,7 @@ UserRouter.get('/:userId/Name', cors(), async (req, res) => {
 
 // UPDATE
 
+UserRouter.options('/:id', cors()) 
 UserRouter.put("/:id", cors(),  async (req, res) => {
     const userId = req.params.id;
     const updatedProfile = req.body;
@@ -106,6 +111,7 @@ UserRouter.put("/:id", cors(),  async (req, res) => {
 
 // DELETE
 
+UserRouter.options("/Delete/:id", cors()) 
 UserRouter.delete("/Delete/:id", cors(),  async (req, res) => {  
     try {
         const userId = req.params.id;
@@ -119,6 +125,7 @@ UserRouter.delete("/Delete/:id", cors(),  async (req, res) => {
     }
 })
 
+UserRouter.options("/Logout", cors()) 
 UserRouter.get("/Logout", cors(),  (req, res) => {
     res.clearCookie("Token"); 
 })
