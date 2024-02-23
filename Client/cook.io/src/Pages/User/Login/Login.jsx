@@ -60,7 +60,7 @@ const Login = () => {
             setError(false)
             const response = await Axios.post("https://cook-io-server.vercel.app/Users/Login", data, {
                 headers: {
-                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Origin": "https://cook-io-server.vercel.app",
                     "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
                     "Content-Type": "application/json", 
                 }
