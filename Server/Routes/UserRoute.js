@@ -5,13 +5,14 @@ const cookieParser = require("cookie-parser");
 const User = require("../Models/Users");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const cors = require("cors");
 
 const myPassword = process.env.Password
 
 UserRouter.use(cookieParser())
 dotenv.config();
 
-UserRouter.post("/Registration", async (req, res) => {
+UserRouter.post("/Registration", cors(),  async (req, res) => {
 
     // Checking if the user is already in the database
 
@@ -36,7 +37,7 @@ UserRouter.post("/Registration", async (req, res) => {
     }
 })
 
-UserRouter.post("/Login", async (req, res) => {
+UserRouter.post("/Login", cors(), async (req, res) => {
 
     // Checking if the email is in the database
 
@@ -56,7 +57,7 @@ UserRouter.post("/Login", async (req, res) => {
     }  
 })
 
-UserRouter.get('/:id', async (req, res) => { 
+UserRouter.get('/:id', cors(),  async (req, res) => { 
     try {
     const UserDetails = await User.findById(req.params.id);
     if (!UserDetails) {
@@ -68,7 +69,7 @@ UserRouter.get('/:id', async (req, res) => {
     }
 });
 
-UserRouter.get('/:userId/Name', async (req, res) => { 
+UserRouter.get('/:userId/Name', cors(), async (req, res) => { 
 
     try {
     const UserID= await User.findById(req.params.userId);
@@ -83,7 +84,7 @@ UserRouter.get('/:userId/Name', async (req, res) => {
 
 // UPDATE
 
-UserRouter.put("/:id", async (req, res) => {
+UserRouter.put("/:id", cors(),  async (req, res) => {
     const userId = req.params.id;
     const updatedProfile = req.body;
 
@@ -105,7 +106,7 @@ UserRouter.put("/:id", async (req, res) => {
 
 // DELETE
 
-UserRouter.delete("/Delete/:id", async (req, res) => {  
+UserRouter.delete("/Delete/:id", cors(),  async (req, res) => {  
     try {
         const userId = req.params.id;
 
@@ -118,7 +119,7 @@ UserRouter.delete("/Delete/:id", async (req, res) => {
     }
 })
 
-UserRouter.get("/Logout", (req, res) => {
+UserRouter.get("/Logout", cors(),  (req, res) => {
     res.clearCookie("Token"); 
 })
 
