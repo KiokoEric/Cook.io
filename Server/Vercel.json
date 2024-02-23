@@ -11,16 +11,8 @@
             "src": "/(.*)",
             "dest": "/",
             "methods": ["POST", "GET", "PUT", "DELETE"],
-            "headers" : {
-                "Access-Control-Allow-Origin": "https://cook-io-mu.vercel.app"
-            }
-        }
-    ],
-    "headers": [
-        {
-            "src": "/(.*)",
             "headers": [
-            { "key": "Access-Control-Allow-Origin", "value": "*" }
+                { "key": "Access-Control-Allow-Origin", "value": "*" }
             ]
         }
     ]
