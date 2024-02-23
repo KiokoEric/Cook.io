@@ -36,6 +36,9 @@ const UserRoute = require("./Routes/UserRoute");
 const RecipeRoute = require("./Routes/RecipeRoute"); 
 const FavouriteRoute = require("./Routes/FavouriteRoute"); 
 
+app.options("/Users", cors())
 app.use("/Users", UserRoute);
+app.options("/Recipe", cors())
 app.use("/Recipe", RecipeRoute);
+app.options("/Favourites", cors())
 app.use("/Favourites", FavouriteRoute);
