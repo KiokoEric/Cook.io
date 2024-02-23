@@ -15,5 +15,13 @@
                 "Access-Control-Allow-Origin": "https://cook-io-mu.vercel.app"
             }
         }
+    ],
+    "headers": [
+        {
+            "source": "/api/*",
+            "headers": [
+            { "key": "Access-Control-Allow-Origin", "value": "*" }
+            ]
+        }
     ]
 }
