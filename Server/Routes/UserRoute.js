@@ -9,6 +9,8 @@ const cors = require("cors");
 
 const myPassword = process.env.Password
 
+UserRouter.options('*', cors())
+
 UserRouter.use(cookieParser())
 dotenv.config();
 
