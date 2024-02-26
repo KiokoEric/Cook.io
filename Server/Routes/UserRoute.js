@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const User = require("../Models/Users");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+import Axios from "axios";
 const cors = require("cors");
 
 const myPassword = process.env.Password
@@ -40,26 +41,50 @@ UserRouter.post("/Registration", cors(),  async (req, res) => {
     }
 })
 
-UserRouter.options("/Login", cors()) 
-UserRouter.post("/Login", cors(), async (req, res) => {
+// UserRouter.options("/Login", cors()) 
+// UserRouter.post("/Login", cors(), async (req, res) => {
 
-    // Checking if the email is in the database
+//     // Checking if the email is in the database
 
-    const NewUser = await User.findOne({Email: req.body.Email})
-    if(!NewUser) return res.status(400).send("Email is not valid!"); 
+//     const NewUser = await User.findOne({Email: req.body.Email})
+//     if(!NewUser) return res.status(400).send("Email is not valid!"); 
 
-    // correctPassword
+//     // correctPassword
 
-    const validPassword = await bcrypt.compare(req.body.Password, NewUser.Password)
-    if(!validPassword) return res.status(400).send("Password is not valid!");
+//     const validPassword = await bcrypt.compare(req.body.Password, NewUser.Password)
+//     if(!validPassword) return res.status(400).send("Password is not valid!");
 
-    // Create and assign a token
+//     // Create and assign a token
 
-    if (NewUser) {
-        const Token = jwt.sign({_id: NewUser._id}, myPassword);
-        res.json({Token, UserID: NewUser._id});
-    }  
-})
+//     if (NewUser) {
+//         const Token = jwt.sign({_id: NewUser._id}, myPassword);
+//         res.json({Token, UserID: NewUser._id});
+//     }  
+// })
+
+UserRouter.post('/Login', async (req, res) => {
+    const { Email, Password } = req.body;
+
+    try {
+        // Make a POST request to authenticate the user
+        const LoginData = await Axios.post('http://authentication-service.com/login', {
+        Email,Password})
+        .then(response  => {
+            res.header('Access-Control-Allow-Origin', 'https://cook-io-server.vercel.app'); 
+            res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+            res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+            // Assuming the authentication service responds with a token upon successful login
+            const AuthorisationToken = LoginData .data.token;
+
+            // You can then send back the token to the client or use it for further operations
+            res.json({ Token: AuthorisationToken});
+        })
+    } catch (error) {
+        // Handle any errors, such as incorrect credentials or network issues
+        console.error('Login error:', error.LoginData  ? error.LoginData .data : error.message);
+        res.status(error.LoginData  ? error.LoginData .status : 500).json({ error: 'Login failed' });
+    }
+});
 
 UserRouter.options('/:id', cors()) 
 UserRouter.get('/:id', cors(),  async (req, res) => { 
