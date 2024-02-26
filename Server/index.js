@@ -11,11 +11,11 @@ dotenv.config();
 
 app.options('*', cors())
 
-app.use(cors({
-    Origin: ["https://cook-io-server.vercel.app"],
-    methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
-    credentials: true
-}))
+// app.use(cors({
+//     Origin: ["https://cook-io-server.vercel.app"],
+//     methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
+//     credentials: true
+// }))
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*'); 
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');

@@ -34,13 +34,7 @@ const Login = () => {
         }
         try {
             setError(false)
-            const response = await Axios.post("https://cook-io-server.vercel.app/Users/Login", data, {
-                headers: {
-                    "Access-Control-Allow-Origin": "*",
-                    "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
-                    "Content-Type": "application/json", 
-                }
-                })
+            const response = await Axios.post("https://cook-io-server.vercel.app/Users/Login", data)
                 setCookie("auth_token", response.data.Token)
                 window.localStorage.setItem("UserID", response.data.UserID)
                 enqueueSnackbar("Logged in successfully!" , {variant: "success"}) 
@@ -58,13 +52,7 @@ const Login = () => {
         }
         try {
             setError(false)
-            const response = await Axios.post("https://cook-io-server.vercel.app/Users/Login", data, {
-                headers: {
-                    "Access-Control-Allow-Origin": "https://cook-io-server.vercel.app",
-                    "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
-                    "Content-Type": "application/json", 
-                }
-                })
+            const response = await Axios.post("https://cook-io-server.vercel.app/Users/Login", data,)
                 setCookie("auth_token", response.data.Token)
                 window.localStorage.setItem("UserID", response.data.UserID)
                 enqueueSnackbar("Logged in successfully!" , {variant: "success"}) 
