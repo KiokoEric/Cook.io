@@ -26,7 +26,7 @@ useEffect(()=> {
 return (
     <div >
         <article>
-            <ion-icon onClick={NewTab} id="Play" name="play"></ion-icon>
+            <ion-icon onClick={NewTab} id="Play" name="play-outline"></ion-icon>
         </article>
         {
         (!Items) ? <h2 className='Failure' >No Results Found</h2> :

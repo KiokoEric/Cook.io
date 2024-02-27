@@ -54,7 +54,7 @@ const Home = () => {
             const data = {
                 ID, userOwner
             }
-            await Axios.post(`https://cook-io-server.vercel.app/Favourites/Favourite/${ID}`, data, {
+            await Axios.post(`http://localhost:4000/Favourites/Favourite/${ID}`, data, {
                 headers: { authorization: Cookie.auth_token },
             })
         } catch (error) {

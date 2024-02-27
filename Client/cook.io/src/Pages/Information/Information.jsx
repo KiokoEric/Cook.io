@@ -13,7 +13,7 @@ const Information = () => {
 
     Axios.defaults.withCredentials = true;
     useEffect(() => {
-        Axios.get(`https://cook-io-server.vercel.app/Recipe/${id}`, {
+        Axios.get(`http://localhost:4000/Recipe/${id}`, {
         headers: { authorization: Cookie.auth_token }
         }) 
         .then((Response) => {
@@ -25,7 +25,7 @@ const Information = () => {
     // Delete Recipe
 
     const handleDelete= (_id) => {
-        Axios.delete(`https://cook-io-server.vercel.app/Recipe/${_id}`, {
+        Axios.delete(`http://localhost:4000/Recipe/${_id}`, {
             headers: { authorization: Cookie.auth_token } 
         }) 
         .then(

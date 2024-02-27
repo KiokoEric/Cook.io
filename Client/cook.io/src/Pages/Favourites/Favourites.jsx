@@ -35,7 +35,7 @@ const Favourites = () => {
 
         const fetchRecipeID = async () => {
             try{
-                await Axios.get(`https://cook-io-server.vercel.app/Favourites/${UserID}/Favourites`, {
+                await Axios.get(`http://localhost:4000/Favourites/${UserID}/Favourites`, {
                 headers: { authorization: Cookie.auth_token },
                 }) 
                 .then((response) =>   {
@@ -50,7 +50,7 @@ const Favourites = () => {
 
         const fetchRecipeID2 = async () => {
             try {
-                await Axios.get(`https://cook-io-server.vercel.app/Favourites/${UserID}/Favourites`, {
+                await Axios.get(`http://localhost:4000/Favourites/${UserID}/Favourites`, {
                 headers: { authorization: Cookie.auth_token },
                 }) 
                 .then((response) =>   {
@@ -65,7 +65,7 @@ const Favourites = () => {
 
         const fetchRecipeID3 = async () => {
             try {
-                await Axios.get(`https://cook-io-server.vercel.app/Favourites/${UserID}/Favourites`, {
+                await Axios.get(`http://localhost:4000/Favourites/${UserID}/Favourites`, {
                 headers: { authorization: Cookie.auth_token },
                 }) 
                 .then((response) =>   {
@@ -79,7 +79,7 @@ const Favourites = () => {
 
         const fetchRecipeID4 = async () => {
             try {
-                await Axios.get(`https://cook-io-server.vercel.app/Favourites/${UserID}/Favourites`, {
+                await Axios.get(`http://localhost:4000/Favourites/${UserID}/Favourites`, {
                 headers: { authorization: Cookie.auth_token },
                 }) 
                 .then((response) =>   {
@@ -94,7 +94,7 @@ const Favourites = () => {
 
         const fetchRecipeID5 = async () => {
             try {
-                await Axios.get(`https://cook-io-server.vercel.app/Favourites/${UserID}/Favourites`, {
+                await Axios.get(`http://localhost:4000/Favourites/${UserID}/Favourites`, {
                 headers: { authorization: Cookie.auth_token },
                 }) 
                 .then((response) =>   {
@@ -109,7 +109,7 @@ const Favourites = () => {
 
         const fetchRecipeID6 = async () => {
             try {
-                await Axios.get(`https://cook-io-server.vercel.app/Favourites/${UserID}/Favourites`, {
+                await Axios.get(`http://localhost:4000/Favourites/${UserID}/Favourites`, {
                 headers: { authorization: Cookie.auth_token },
                 }) 
                 .then((response) =>   {
@@ -271,7 +271,7 @@ const Favourites = () => {
     },[RecipeID6])
     
     const RemoveFromFavourites = (id) => {
-        Axios.delete(`https://cook-io-server.vercel.app/Favourites/${id}`, {
+        Axios.delete(`http://localhost:4000/Favourites/${id}`, {
             headers: { authorization: Cookie.auth_token }
         }) 
         .then(

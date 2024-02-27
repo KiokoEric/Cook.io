@@ -9,19 +9,11 @@ dotenv.config();
 
 // Middleware
 
-app.options('*', cors())
-
-// app.use(cors({
-//     Origin: ["https://cook-io-server.vercel.app"],
-//     methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
-//     credentials: true
-// }))
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://cook-io-server.vercel.app'); 
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-    next();
-});
+app.use(cors({
+    origin: ["http://localhost:3000"],
+    methods: ["POST", "GET", "PUT" ,"DELETE"],  
+    credentials: true
+}))
 app.use(express.json())
 app.use(cookieParser())
 
@@ -38,9 +30,9 @@ const UserRoute = require("./Routes/UserRoute");
 const RecipeRoute = require("./Routes/RecipeRoute"); 
 const FavouriteRoute = require("./Routes/FavouriteRoute"); 
 
-app.options("/Users", cors())
+
 app.use("/Users", UserRoute);
-app.options("/Recipe", cors())
 app.use("/Recipe", RecipeRoute);
-app.options("/Favourites", cors())
 app.use("/Favourites", FavouriteRoute);
+
+app.listen(4000)

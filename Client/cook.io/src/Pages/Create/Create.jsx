@@ -119,7 +119,7 @@ const Create = () => {
                 Name, Description, Ingredients, Instructions, Image, userOwner
             }
             try {
-                Axios.post("https://cook-io-server.vercel.app/Recipe/AddRecipe", data , {
+                Axios.post("http://localhost:4000/Recipe/AddRecipe", data , {
                     headers: { authorization: Cookie.auth_token },
                 }) 
                 .then(() => { 
