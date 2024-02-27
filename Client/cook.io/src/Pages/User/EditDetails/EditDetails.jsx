@@ -37,7 +37,7 @@ const EditDetails = () => {
 
         const FetchUser =() => {
         try{
-            Axios.get(`https://cook-io-h8ue.onrender.com/Users/${userID}`, {
+            Axios.get(`https://cook-io-server.onrender.com/Users/${userID}`, {
             headers: { authorization: Cookie.auth_token },
             }) 
             .then((Data) => { 
@@ -62,7 +62,7 @@ const EditDetails = () => {
             Name, Email, Password
         }
         try {
-            Axios.put(`https://cook-io-h8ue.onrender.com/Users/${userID}`, data , {
+            Axios.put(`https://cook-io-server.onrender.com/Users/${userID}`, data , {
                 headers: { authorization: Cookie.auth_token },
             }) 
             .then(() => { 

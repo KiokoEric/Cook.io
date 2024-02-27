@@ -54,7 +54,7 @@ const Home = () => {
             const data = {
                 ID, userOwner
             }
-            await Axios.post(`https://cook-io-h8ue.onrender.com/Favourites/Favourite/${ID}`, data, {
+            await Axios.post(`https://cook-io-server.onrender.com/Favourites/Favourite/${ID}`, data, {
                 headers: { authorization: Cookie.auth_token },
             })
         } catch (error) {

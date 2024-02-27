@@ -21,7 +21,7 @@ const Edit = () => {
     const { _id } = useParams()
 
     useEffect(() => {
-        Axios.get(`https://cook-io-h8ue.onrender.com/Recipe/${_id}`, {
+        Axios.get(`https://cook-io-server.onrender.com/Recipe/${_id}`, {
                 headers: { authorization: Cookie.auth_token },
             }) 
         .then((Data) => { 
@@ -40,7 +40,7 @@ const Edit = () => {
             Name, Description, Ingredients, Instructions, Image, userOwner
         }
         try {
-            Axios.put(`https://cook-io-h8ue.onrender.com/Recipe/${_id}`, data , {
+            Axios.put(`https://cook-io-server.onrender.com/Recipe/${_id}`, data , {
                 headers: { authorization: Cookie.auth_token },
             }) 
             .then(() => { 

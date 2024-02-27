@@ -13,7 +13,7 @@ const Information = () => {
 
     Axios.defaults.withCredentials = true;
     useEffect(() => {
-        Axios.get(`https://cook-io-h8ue.onrender.com/Recipe/${id}`, {
+        Axios.get(`https://cook-io-server.onrender.com/Recipe/${id}`, {
         headers: { authorization: Cookie.auth_token }
         }) 
         .then((Response) => {
@@ -25,7 +25,7 @@ const Information = () => {
     // Delete Recipe
 
     const handleDelete= (_id) => {
-        Axios.delete(`https://cook-io-h8ue.onrender.com/Recipe/${_id}`, {
+        Axios.delete(`https://cook-io-server.onrender.com/Recipe/${_id}`, {
             headers: { authorization: Cookie.auth_token } 
         }) 
         .then(

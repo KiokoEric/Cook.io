@@ -48,7 +48,7 @@ const Categories = () => {
             ID, userOwner
         }
         try {
-        await Axios.post("https://cook-io-h8ue.onrender.com/Favourites/AddFavourite", data, {
+        await Axios.post("https://cook-io-server.onrender.com/Favourites/AddFavourite", data, {
             headers: { authorization: Cookie.auth_token },
         });
         setFavourites(data.Favourites);

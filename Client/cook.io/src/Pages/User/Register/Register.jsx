@@ -46,7 +46,7 @@ const Register = () => {
             }
             try {
                 setError(false)
-                await Axios.post("https://cook-io-h8ue.onrender.com/Users/Registration", data)
+                await Axios.post("https://cook-io-server.onrender.com/Users/Registration", data)
                 .then(() => {
                     setFieldError("")
                     enqueueSnackbar("Registration Completed! Kindly Log in", {variant: "success"})
