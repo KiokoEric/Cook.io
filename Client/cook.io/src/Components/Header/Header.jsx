@@ -21,7 +21,7 @@ const Header = () => {
     useEffect(() => {
         
         const FetchName  = async() => {
-            await Axios.get(`http://localhost:4000/Users/${userID}/Name`, {
+            await Axios.get(`https://cook-io-h8ue.onrender.com/Users/${userID}/Name`, {
             headers: { authorization: Cookie.auth_token },
             }) 
             .then((Response) => {

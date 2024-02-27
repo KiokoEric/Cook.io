@@ -119,7 +119,7 @@ const Create = () => {
                 Name, Description, Ingredients, Instructions, Image, userOwner
             }
             try {
-                Axios.post("http://localhost:4000/Recipe/AddRecipe", data , {
+                Axios.post("https://cook-io-h8ue.onrender.com/Recipe/AddRecipe", data , {
                     headers: { authorization: Cookie.auth_token },
                 }) 
                 .then(() => { 

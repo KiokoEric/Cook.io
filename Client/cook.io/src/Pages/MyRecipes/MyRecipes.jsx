@@ -18,7 +18,7 @@ const MyRecipes = () => {
     useEffect(() => {
 
     const fetchRecipes = async () => {
-        await Axios.get(`http://localhost:4000/Recipe/${userID}/Recipes`, {
+        await Axios.get(`https://cook-io-h8ue.onrender.com/Recipe/${userID}/Recipes`, {
         headers: { authorization: Cookie.auth_token },
         }) 
         .then((Response) => {
@@ -39,7 +39,7 @@ const MyRecipes = () => {
     // Delete Recipe
 
     const handleDelete= (_id) => {
-        Axios.delete(`http://localhost:4000/Recipe/${_id}`, {
+        Axios.delete(`https://cook-io-h8ue.onrender.com/Recipe/${_id}`, {
             headers: { authorization: Cookie.auth_token }
         }) 
         .then(

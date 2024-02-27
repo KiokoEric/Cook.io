@@ -29,7 +29,7 @@ const Popular = () => {
             ID, userOwner
         }
         try {
-        await Axios.post("http://localhost:4000/Favourites/AddFavourite", data, {
+        await Axios.post("https://cook-io-h8ue.onrender.com/Favourites/AddFavourite", data, {
             headers: { authorization: Cookie.auth_token },
         });
         setFavourites(data.Favourites);
