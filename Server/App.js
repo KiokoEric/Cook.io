@@ -10,7 +10,7 @@ dotenv.config();
 // Middleware
 
 app.use(cors({
-    origin: ["https://cook-io-frontend.onrender.com"],
+    origin: ["https://cook-io-8x99.onrender.com"],
     methods: ["POST", "GET", "PUT" ,"DELETE"],  
     credentials: true
 }))
