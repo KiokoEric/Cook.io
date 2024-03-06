@@ -172,6 +172,9 @@
         height: 220px;
         width: 220px;
     }
+    .Nationality section:last-child button {
+        margin-left: 0rem;
+    }
 }
 
 @media (max-width:428px) {
@@ -213,6 +216,9 @@
         height: 350px;
         width: 350px;
     }
+    .Nationality section:last-child button {
+        margin-left: -20.5rem;
+    }
 }
 
 @media (max-width:375px) {
@@ -247,5 +253,8 @@
     .Nationality section:last-child img {
         height: 300px;
         width: 300px;
+    }
+    .Nationality section:last-child button {
+        margin-left: -20.5rem;
     }
 }
