@@ -205,7 +205,7 @@
         width: 350px;
     }
     .RecipeIndex section:last-child button {
-        margin-left: -20.5rem;
+        margin-left: 0rem;
     }
 }
 
@@ -252,6 +252,6 @@
         width: 300px;
     }
     .RecipeIndex section:last-child button {
-        margin-left: -20.5rem;
+        margin-left: 0rem;
     }
 }

@@ -217,7 +217,7 @@
         width: 350px;
     }
     .Nationality section:last-child button {
-        margin-left: -20.5rem;
+        margin-left: 0rem;
     }
 }
 
@@ -255,6 +255,6 @@
         width: 300px;
     }
     .Nationality section:last-child button {
-        margin-left: -20.5rem;
+        margin-left: 0rem;
     }
 }
