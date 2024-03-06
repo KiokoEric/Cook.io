@@ -75,7 +75,7 @@ The website application was built using React JS, Express JS, Mongo DB and use o
 <h3 align="center" >Favourites Section</h3>
 
   <div align="center" >
-    <img  src="https://i.postimg.cc/8C3B7JH9/Better-Health-Favourites.jpg"> 
+    <img  src="https://i.postimg.cc/NFRDdVb0/Cook-io-Favourites-Page.jpg"> 
 
   </div>
 
