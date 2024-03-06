@@ -174,9 +174,6 @@
         height: 220px;
         width: 220px;
     }
-    .Category section:last-child button {
-        width: 200px;
-    }
 }
 
 @media (max-width:428px) {
